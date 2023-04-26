@@ -2,7 +2,7 @@ import { Directive, Field, ID, ObjectType } from '@nestjs/graphql';
 
 @ObjectType({ description: 'Book model' })
 export class Book {
-  @Field(type => ID)
+  @Field(() => ID)
   id: string;
 
   @Directive('@upper')
@@ -14,6 +14,6 @@ export class Book {
   @Field()
   creationDate: Date;
 
-  @Field(type => [String])
-  ingredients: string[];
+  @Field(() => [String])
+  authors: string[];
 }

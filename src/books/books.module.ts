@@ -4,5 +4,6 @@ import { BooksResolver } from './books.resolver';
 
 @Module({
   providers: [BooksService, BooksResolver],
+  exports: [BooksService],
 })
 export class BooksModule {}

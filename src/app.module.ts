@@ -7,6 +7,7 @@ import { BooksModule } from './books/books.module';
 import { join } from 'path';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { AuthorsModule } from './authors/authors.module';
 
 @Module({
   imports: [
@@ -25,6 +26,7 @@ import { AppService } from './app.service';
         ],
       },
     }),
+    AuthorsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
